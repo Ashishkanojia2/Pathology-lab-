@@ -1,0 +1,52 @@
+.ExpirW{
+    -fx-background-color:#fff;
+}
+.ExpirB{
+    -fx-background-color:#000;
+}
+.ExpirG{
+    -fx-background-color:#2AB072;
+}
+.leftSide{
+    -fx-Background-color: linear-gradient(to bottom right, rgb(29, 67, 80), rgb(164, 57, 49));
+   /* linear-gradient(to right, rgb(29, 67, 80), rgb(164, 57, 49))*/
+}
+.CancleBtn{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+
+}
+.CancleBtn:hover{
+    -fx-background-color:#F44336;
+}
+.loginBtn{
+    -fx-background-color: linear-gradient( to right ,rgb(29, 67, 80), rgb(164, 57, 49));
+     -fx-font-size:22px;
+     -fx-font-family:"Bodoni MT"
+      /*-fx-border-radius:15px;*/
+}
+
+.loginBtn:pressed{
+ /*  -fx-background-color: linear-gradient( to right ,rgb(78, 32, 33), rgb(16, 34, 45));*/
+  /* -fx-background-color: linear-gradient( to right ,rgb(29, 67, 80), rgb(164, 57, 49));*/
+    -fx-background-color: linear-gradient( to right ,rgb(164, 57, 49), rgb(29, 67, 80));
+    -fx-border-color:#fff;
+    -fx-font-size:21px;
+    -fx-font-family:"Bodoni MT"
+    /*-fx-border-radius:10px;*/
+}
+.textArea{
+    -fx-background-color:transparent;
+    -fx-border-color:#000;
+    -fx-font-size:15px;
+    -fx-border-size:.5px;
+    -fx-border-radius:5px;
+
+    }
+
+.textArea:focused{
+    -fx-border-color: linear-gradient( to right ,rgb(29, 67, 80), rgb(164, 57, 49));
+    -fx-border-width:2px;
+    -fx-border-radius:6px;
+    -fx-font-size:15px;
+}

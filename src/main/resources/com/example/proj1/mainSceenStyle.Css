@@ -1,0 +1,73 @@
+.black{
+    -fx-background-color:#000;
+}
+.white{
+   -fx-background-color:#fff;
+}
+.green{
+    -fx-background-color:#229142;
+}
+.yellow{
+    -fx-background-color:#FEC726;
+}
+.red{
+    -fx-background-color:#FF6651;
+}
+.blue{
+    -fx-background-color:#4FC3F7;
+}
+.darkBlue{
+ -fx-background-color:#2F424C;
+}
+
+.button{
+    -fx-background-color:#000;
+    -fx-text-fill:#fff;
+    -fx-font-size:15px;
+}
+.shadow{
+    -fx-background-color:#fff;
+    -fx-background-radius:20px;
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,.9), 60,0,0,0);
+}
+.item-edit-button{
+    -fx-border-color: linear-gradient(to right, rgb(41, 128, 185), rgb(109, 213, 250));
+
+    -fx-border-radius:15px;
+    -fx-border-width:2px;
+    -fx-background-color:transparent;
+    -fx-background-radius:20px;
+    -fx-text-fill:#000;
+    -fx-font-size:15px;
+    -fx-cursor:hand;
+}
+.item-edit-button:hover{
+    -fx-border-width:3px;
+}
+.slotBtn{
+    -fx-border-radius:5px;
+    -fx-border-width:2px;
+    -fx-background-color:transparent;
+    -fx-background-radius:5px;
+    -fx-text-fill:#000;
+    -fx-font-size:15px;
+    -fx-cursor:hand;
+}
+.slotBtn:hover{
+    -fx-background-color:#2F414B;
+    -fx-text-fill:#fff;
+
+}
+.button_transparent{
+    -fx-background-color:transparent;
+}
+.Scrollpane{
+    -fx-background-color:#F4F4F4;
+}
+textPadding{
+ -fx-textPadding:20px;
+}
+.bloodpane{
+-fx-background-color:#F4F4F4;
+}
+
