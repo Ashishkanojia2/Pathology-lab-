@@ -6,7 +6,6 @@
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -17,7 +16,6 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="806.0"
            prefWidth="1533.0" styleClass="green" stylesheets="@mainSceenStyle.Css" xmlns="http://javafx.com/javafx/19"
@@ -33,8 +31,7 @@
                                     BorderPane.alignment="CENTER">
                             <children>
                                 <Label layoutX="11.0" layoutY="7.0" prefHeight="38.0" prefWidth="239.0"
-                                       text="PATHOLOGY LAB"
-                                       textFill="WHITE">
+                                       text="PATHOLOGY LAB" textFill="WHITE">
                                     <font>
                                         <Font name="Perpetua" size="29.0"/>
                                     </font>
@@ -66,743 +63,773 @@
                         </VBox>
                     </left>
                     <center>
-                        <AnchorPane fx:id="ContentArea" prefHeight="759.0" prefWidth="1400.0"
-                                    BorderPane.alignment="CENTER"/>
-                        <AnchorPane fx:id="GreenTable_Screen" layoutX="184.0" layoutY="209.0" prefHeight="759.2"
-                                    prefWidth="1399.2" styleClass="red" visible="false" AnchorPane.bottomAnchor="0.0"
-                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+                        <AnchorPane>
+
                             <children>
-                                <BorderPane layoutX="317.0" layoutY="190.0" prefHeight="759.2" prefWidth="1399.2"
+
+                                <AnchorPane fx:id="ContentArea" prefHeight="759.0" prefWidth="1400.0"
+                                            BorderPane.alignment="CENTER"/>
+                                <AnchorPane fx:id="GreenTable_Screen" layoutX="184.0" layoutY="209.0" prefHeight="759.2"
+                                            prefWidth="1399.2" styleClass="red" visible="true"
                                             AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
                                             AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                    <right>
-                                        <VBox prefHeight="759.0" prefWidth="449.0" styleClass="red"
-                                              BorderPane.alignment="CENTER">
-                                            <children>
-                                                <AnchorPane prefHeight="759.0" prefWidth="450.0" styleClass="green">
+                                    <children>
+                                        <BorderPane layoutX="317.0" layoutY="190.0" prefHeight="759.2"
+                                                    prefWidth="1399.2" AnchorPane.bottomAnchor="0.0"
+                                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                    AnchorPane.topAnchor="0.0">
+                                            <right>
+                                                <VBox prefHeight="759.0" prefWidth="449.0" styleClass="red"
+                                                      BorderPane.alignment="CENTER">
                                                     <children>
-                                                        <Label layoutX="73.0" layoutY="28.0" prefHeight="42.0"
-                                                               prefWidth="303.0" text="ENTER PATIENT DETAILS"
-                                                               textAlignment="CENTER" textFill="WHITE" underline="true">
-                                                            <font>
-                                                                <Font name="Serif Regular" size="24.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <Label layoutX="59.0" layoutY="107.0" text="Name :">
-                                                            <font>
-                                                                <Font name="Serif Regular" size="18.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <TextField layoutX="189.0" layoutY="104.0" prefHeight="26.0"
-                                                                   prefWidth="226.0" promptText="Patient Full Name">
-                                                            <font>
-                                                                <Font name="SansSerif Regular" size="14.0"/>
-                                                            </font>
-                                                        </TextField>
-                                                        <Label layoutX="59.0" layoutY="401.0" text="Doctor Refer:">
-                                                            <font>
-                                                                <Font name="Serif Regular" size="18.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <Label layoutX="59.0" layoutY="360.0" text="CheckUp:">
-                                                            <font>
-                                                                <Font name="Serif Regular" size="18.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <Label layoutX="59.0" layoutY="149.0" text="Age :">
-                                                            <font>
-                                                                <Font name="Serif Regular" size="18.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <Label layoutX="59.0" layoutY="191.0" text="Gender">
-                                                            <font>
-                                                                <Font name="Serif Regular" size="18.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <Label layoutX="59.0" layoutY="234.0" text="Phone No:">
-                                                            <font>
-                                                                <Font name="Serif Regular" size="18.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <Label layoutX="59.0" layoutY="276.0" text="Address :">
-                                                            <font>
-                                                                <Font name="Serif Regular" size="18.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <Label layoutX="59.0" layoutY="319.0" text="Date : ">
-                                                            <font>
-                                                                <Font name="Serif Regular" size="18.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <TextField layoutX="189.0" layoutY="188.0" prefHeight="26.0"
-                                                                   prefWidth="226.0" promptText="Patient Gender">
-                                                            <font>
-                                                                <Font name="SansSerif Regular" size="14.0"/>
-                                                            </font>
-                                                        </TextField>
-                                                        <TextField layoutX="189.0" layoutY="231.0" prefHeight="26.0"
-                                                                   prefWidth="226.0"
-                                                                   promptText="Patient Phone/Mobile No.">
-                                                            <font>
-                                                                <Font name="SansSerif Regular" size="14.0"/>
-                                                            </font>
-                                                        </TextField>
-                                                        <TextField layoutX="189.0" layoutY="273.0" prefHeight="26.0"
-                                                                   prefWidth="226.0" promptText="Patient Full Address">
-                                                            <font>
-                                                                <Font name="SansSerif Regular" size="14.0"/>
-                                                            </font>
-                                                        </TextField>
-                                                        <TextField layoutX="189.0" layoutY="315.0" prefHeight="26.0"
-                                                                   prefWidth="226.0" promptText="Patient Checkup Date">
-                                                            <font>
-                                                                <Font name="SansSerif Regular" size="14.0"/>
-                                                            </font>
-                                                        </TextField>
-                                                        <TextField layoutX="189.0" layoutY="357.0" prefHeight="26.0"
-                                                                   prefWidth="226.0" promptText="Patient Checkup">
-                                                            <font>
-                                                                <Font name="SansSerif Regular" size="14.0"/>
-                                                            </font>
-                                                        </TextField>
-                                                        <TextField layoutX="189.0" layoutY="398.0" prefHeight="26.0"
-                                                                   prefWidth="226.0" promptText="Doctor Refer">
-                                                            <font>
-                                                                <Font name="SansSerif Regular" size="14.0"/>
-                                                            </font>
-                                                        </TextField>
-                                                        <TextField layoutX="189.0" layoutY="146.0" prefHeight="26.0"
-                                                                   prefWidth="226.0" promptText="Patient Age">
-                                                            <font>
-                                                                <Font name="SansSerif Regular" size="14.0"/>
-                                                            </font>
-                                                        </TextField>
-                                                        <Button layoutX="123.0" layoutY="451.0" mnemonicParsing="false"
-                                                                prefHeight="31.0" prefWidth="248.0" text="SAVE DETAIL"/>
-                                                        <Label layoutX="63.0" layoutY="533.0" text="Amount:">
-                                                            <font>
-                                                                <Font name="Serif Regular" size="18.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <TextField layoutX="189.0" layoutY="530.0" prefHeight="26.0"
-                                                                   prefWidth="226.0">
-                                                            <font>
-                                                                <Font name="SansSerif Regular" size="14.0"/>
-                                                            </font>
-                                                        </TextField>
+                                                        <AnchorPane prefHeight="759.0" prefWidth="450.0"
+                                                                    styleClass="green">
+                                                            <children>
+                                                                <Label layoutX="73.0" layoutY="28.0" prefHeight="42.0"
+                                                                       prefWidth="303.0" text="ENTER PATIENT DETAILS"
+                                                                       textAlignment="CENTER" textFill="WHITE"
+                                                                       underline="true">
+                                                                    <font>
+                                                                        <Font name="Serif Regular" size="24.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="59.0" layoutY="107.0" text="Name :">
+                                                                    <font>
+                                                                        <Font name="Serif Regular" size="18.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <TextField layoutX="189.0" layoutY="104.0"
+                                                                           prefHeight="26.0" prefWidth="226.0"
+                                                                           promptText="Patient Full Name">
+                                                                    <font>
+                                                                        <Font name="SansSerif Regular" size="14.0"/>
+                                                                    </font>
+                                                                </TextField>
+                                                                <Label layoutX="59.0" layoutY="401.0"
+                                                                       text="Doctor Refer:">
+                                                                    <font>
+                                                                        <Font name="Serif Regular" size="18.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="59.0" layoutY="360.0" text="CheckUp:">
+                                                                    <font>
+                                                                        <Font name="Serif Regular" size="18.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="59.0" layoutY="149.0" text="Age :">
+                                                                    <font>
+                                                                        <Font name="Serif Regular" size="18.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="59.0" layoutY="191.0" text="Gender">
+                                                                    <font>
+                                                                        <Font name="Serif Regular" size="18.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="59.0" layoutY="234.0" text="Phone No:">
+                                                                    <font>
+                                                                        <Font name="Serif Regular" size="18.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="59.0" layoutY="276.0" text="Address :">
+                                                                    <font>
+                                                                        <Font name="Serif Regular" size="18.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="59.0" layoutY="319.0" text="Date : ">
+                                                                    <font>
+                                                                        <Font name="Serif Regular" size="18.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <TextField layoutX="189.0" layoutY="188.0"
+                                                                           prefHeight="26.0" prefWidth="226.0"
+                                                                           promptText="Patient Gender">
+                                                                    <font>
+                                                                        <Font name="SansSerif Regular" size="14.0"/>
+                                                                    </font>
+                                                                </TextField>
+                                                                <TextField layoutX="189.0" layoutY="231.0"
+                                                                           prefHeight="26.0" prefWidth="226.0"
+                                                                           promptText="Patient Phone/Mobile No.">
+                                                                    <font>
+                                                                        <Font name="SansSerif Regular" size="14.0"/>
+                                                                    </font>
+                                                                </TextField>
+                                                                <TextField layoutX="189.0" layoutY="273.0"
+                                                                           prefHeight="26.0" prefWidth="226.0"
+                                                                           promptText="Patient Full Address">
+                                                                    <font>
+                                                                        <Font name="SansSerif Regular" size="14.0"/>
+                                                                    </font>
+                                                                </TextField>
+                                                                <TextField layoutX="189.0" layoutY="315.0"
+                                                                           prefHeight="26.0" prefWidth="226.0"
+                                                                           promptText="Patient Checkup Date">
+                                                                    <font>
+                                                                        <Font name="SansSerif Regular" size="14.0"/>
+                                                                    </font>
+                                                                </TextField>
+                                                                <TextField layoutX="189.0" layoutY="357.0"
+                                                                           prefHeight="26.0" prefWidth="226.0"
+                                                                           promptText="Patient Checkup">
+                                                                    <font>
+                                                                        <Font name="SansSerif Regular" size="14.0"/>
+                                                                    </font>
+                                                                </TextField>
+                                                                <TextField layoutX="189.0" layoutY="398.0"
+                                                                           prefHeight="26.0" prefWidth="226.0"
+                                                                           promptText="Doctor Refer">
+                                                                    <font>
+                                                                        <Font name="SansSerif Regular" size="14.0"/>
+                                                                    </font>
+                                                                </TextField>
+                                                                <TextField layoutX="189.0" layoutY="146.0"
+                                                                           prefHeight="26.0" prefWidth="226.0"
+                                                                           promptText="Patient Age">
+                                                                    <font>
+                                                                        <Font name="SansSerif Regular" size="14.0"/>
+                                                                    </font>
+                                                                </TextField>
+                                                                <Button layoutX="123.0" layoutY="451.0"
+                                                                        mnemonicParsing="false" prefHeight="31.0"
+                                                                        prefWidth="248.0" text="SAVE DETAIL"/>
+                                                                <Label layoutX="63.0" layoutY="533.0" text="Amount:">
+                                                                    <font>
+                                                                        <Font name="Serif Regular" size="18.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <TextField layoutX="189.0" layoutY="530.0"
+                                                                           prefHeight="26.0" prefWidth="226.0">
+                                                                    <font>
+                                                                        <Font name="SansSerif Regular" size="14.0"/>
+                                                                    </font>
+                                                                </TextField>
+                                                            </children>
+                                                        </AnchorPane>
                                                     </children>
-                                                </AnchorPane>
+                                                </VBox>
+                                            </right>
+                                            <center>
+                                                <TableView BorderPane.alignment="CENTER">
+                                                    <columns>
+                                                        <TableColumn fx:id="P_SNo_Col" prefWidth="84.00002896785736"
+                                                                     text="S.No"/>
+                                                        <TableColumn fx:id="P_Name_Col" prefWidth="66.40001678466797"
+                                                                     text="Name"/>
+                                                        <TableColumn fx:id="P_Age_Col" prefWidth="75.0" text="Age"/>
+                                                        <TableColumn fx:id="P_Gender_Col" prefWidth="75.0"
+                                                                     text="Gender"/>
+                                                        <TableColumn fx:id="P_PhoneNo_Col" prefWidth="75.0"
+                                                                     text="Phone No."/>
+                                                        <TableColumn fx:id="P_Address_Col" prefWidth="75.0"
+                                                                     text="Address"/>
+                                                        <TableColumn fx:id="P_CheckUp_Col" prefWidth="75.0"
+                                                                     text="CheckUp"/>
+                                                        <TableColumn fx:id="P_DR_Refer_Col" prefWidth="75.0"
+                                                                     text="Dr. Refer"/>
+                                                        <TableColumn fx:id="P_Amount_Col" prefWidth="75.0"
+                                                                     text="Amount Paid"/>
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </center>
+                                        </BorderPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="doctorScreen" layoutX="369.0" layoutY="240.0" prefHeight="759.2"
+                                            prefWidth="1399.2" styleClass="blue" visible="false"
+                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="45.0" layoutY="27.0" prefHeight="342.0" prefWidth="1319.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <Label layoutX="46.0" layoutY="29.0" text="Doctor ID :">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="46.0" layoutY="68.0" text="Doctor Name  :">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="46.0" layoutY="102.0" text="Doctor Age :">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="46.0" layoutY="139.0" text="Doctor Gender :">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="48.0" layoutY="177.0" text="Experience :">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="48.0" layoutY="214.0" text="No of treatment :">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="48.0" layoutY="250.0" text="Income :">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="44.0" layoutY="286.0" text="Treatment Charges :">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="Doctor_id" layoutX="245.0" layoutY="25.0"
+                                                           prefHeight="28.0" prefWidth="218.0">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="15.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <TextField fx:id="Doctor_Name" layoutX="246.0" layoutY="61.0"
+                                                           prefHeight="28.0" prefWidth="218.0">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="15.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <TextField fx:id="Doctor_Age" layoutX="246.0" layoutY="98.0"
+                                                           prefHeight="28.0" prefWidth="218.0">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="15.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <TextField fx:id="Doctor_Gender" layoutX="246.0" layoutY="137.0"
+                                                           prefHeight="28.0" prefWidth="218.0">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="15.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <TextField fx:id="Doctor_Expirence" layoutX="246.0" layoutY="175.0"
+                                                           prefHeight="28.0" prefWidth="218.0">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="15.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <TextField fx:id="Doctor_NoT" layoutX="246.0" layoutY="212.0"
+                                                           prefHeight="28.0" prefWidth="218.0">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="15.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <TextField fx:id="Doctor_Income" layoutX="246.0" layoutY="249.0"
+                                                           prefHeight="28.0" prefWidth="218.0">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="15.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <TextField fx:id="Doctor_TreatmentChrg" layoutX="247.0" layoutY="286.0"
+                                                           prefHeight="28.0" prefWidth="218.0">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="15.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <Button fx:id="Doctor_Add_Btn" layoutX="561.0" layoutY="24.0"
+                                                        mnemonicParsing="false" onAction="#addDoctorAdd"
+                                                        prefHeight="32.0" prefWidth="184.0"
+                                                        styleClass="item-edit-button" text="Add">
+                                                    <font>
+                                                        <Font size="10.0"/>
+                                                    </font>
+                                                    <graphic>
+                                                        <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true"
+                                                                   preserveRatio="true" translateX="-27.0">
+                                                            <image>
+                                                                <Image url="@Image/icons8_add_100px_1.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Button>
+                                                <Button fx:id="Doctor_update_Btn" layoutX="561.0" layoutY="82.0"
+                                                        mnemonicParsing="false" prefHeight="32.0" prefWidth="184.0"
+                                                        styleClass="item-edit-button" text="Update">
+                                                    <font>
+                                                        <Font size="10.0"/>
+                                                    </font>
+                                                    <graphic>
+                                                        <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true"
+                                                                   preserveRatio="true" translateX="-20.0">
+                                                            <image>
+                                                                <Image url="@Image/icons8_update_64px_1.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Button>
+                                                <Button fx:id="Doctor_clear_Btn" layoutX="561.0" layoutY="142.0"
+                                                        mnemonicParsing="false" prefHeight="32.0" prefWidth="184.0"
+                                                        styleClass="item-edit-button" text="Clear">
+                                                    <font>
+                                                        <Font size="10.0"/>
+                                                    </font>
+                                                    <graphic>
+                                                        <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true"
+                                                                   preserveRatio="true" translateX="-25.0">
+                                                            <image>
+                                                                <Image url="@Image/icons8_clear_symbol_64px.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Button>
+                                                <Button fx:id="Doctor_Delete_Btn" layoutX="561.0" layoutY="202.0"
+                                                        mnemonicParsing="false" prefHeight="32.0" prefWidth="184.0"
+                                                        styleClass="item-edit-button" text="Delete">
+                                                    <font>
+                                                        <Font size="10.0"/>
+                                                    </font>
+                                                    <graphic>
+                                                        <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true"
+                                                                   preserveRatio="true" translateX="-20.0">
+                                                            <image>
+                                                                <Image url="@Image/icons8_trash_100px.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Button>
+                                                <Button fx:id="Doctor_ImageImport_Btn" layoutX="561.0" layoutY="257.0"
+                                                        mnemonicParsing="false" prefHeight="32.0" prefWidth="184.0"
+                                                        styleClass="item-edit-button" text="Import">
+                                                    <font>
+                                                        <Font size="10.0"/>
+                                                    </font>
+                                                    <graphic>
+                                                        <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true"
+                                                                   preserveRatio="true" translateX="-20.0">
+                                                            <image>
+                                                                <Image url="@Image/icons8_import_100px_3.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Button>
+                                                <AnchorPane fx:id="ImagePane" layoutX="922.0" layoutY="31.0"
+                                                            prefHeight="270.0" prefWidth="307.0" styleClass="shadow"/>
                                             </children>
-                                        </VBox>
-                                    </right>
-                                    <center>
-                                        <TableView BorderPane.alignment="CENTER">
-                                            <columns>
-                                                <TableColumn fx:id="P_SNo_Col" prefWidth="84.00002896785736"
-                                                             text="S.No"/>
-                                                <TableColumn fx:id="P_Name_Col" prefWidth="66.40001678466797"
-                                                             text="Name"/>
-                                                <TableColumn fx:id="P_Age_Col" prefWidth="75.0" text="Age"/>
-                                                <TableColumn fx:id="P_Gender_Col" prefWidth="75.0" text="Gender"/>
-                                                <TableColumn fx:id="P_PhoneNo_Col" prefWidth="75.0" text="Phone No."/>
-                                                <TableColumn fx:id="P_Address_Col" prefWidth="75.0" text="Address"/>
-                                                <TableColumn fx:id="P_CheckUp_Col" prefWidth="75.0" text="CheckUp"/>
-                                                <TableColumn fx:id="P_DR_Refer_Col" prefWidth="75.0" text="Dr. Refer"/>
-                                                <TableColumn fx:id="P_Amount_Col" prefWidth="75.0" text="Amount Paid"/>
-                                            </columns>
-                                            <columnResizePolicy>
-                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
-                                            </columnResizePolicy>
-                                        </TableView>
-                                    </center>
-                                </BorderPane>
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane fx:id="doctorScreen" layoutX="369.0" layoutY="240.0" prefHeight="759.2"
-                                    prefWidth="1399.2" styleClass="blue" visible="false" AnchorPane.bottomAnchor="0.0"
-                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                            <children>
-                                <AnchorPane layoutX="45.0" layoutY="27.0" prefHeight="342.0" prefWidth="1319.0"
-                                            styleClass="shadow">
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="45.0" layoutY="396.0" prefHeight="325.0" prefWidth="1319.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <TableView fx:id="addDoctor_tableVew" prefHeight="325.6"
+                                                           prefWidth="1319.2" AnchorPane.bottomAnchor="0.0"
+                                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                           AnchorPane.topAnchor="0.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="Doctor_col_id" prefWidth="75.0"
+                                                                     text="Doctor ID"/>
+                                                        <TableColumn fx:id="Doctor_col_Name"
+                                                                     prefWidth="86.39998626708984" text="Doctor Name"/>
+                                                        <TableColumn fx:id="Doctor_col_age"
+                                                                     prefWidth="86.39998626708984" text=" Age"/>
+                                                        <TableColumn fx:id="Doctor_col_Gender"
+                                                                     prefWidth="86.39998626708984" text="Gender"/>
+                                                        <TableColumn fx:id="Doctor_col_Exprience"
+                                                                     prefWidth="86.39998626708984" text="Expirence"/>
+                                                        <TableColumn fx:id="Doctor_col_NoT"
+                                                                     prefWidth="86.39998626708984"
+                                                                     text="No of Treatment"/>
+                                                        <TableColumn fx:id="Doctor_col_Income"
+                                                                     prefWidth="86.39998626708984" text="Income"/>
+                                                        <TableColumn fx:id="Doctor_col_TreatmentCharges"
+                                                                     prefWidth="86.39998626708984"
+                                                                     text="Treatment Charges"/>
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="slotAnchorPane" layoutX="298.0" layoutY="153.0" prefHeight="759.2"
+                                            prefWidth="1399.2" styleClass="darkBlue" visible="false"
+                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <Label layoutX="46.0" layoutY="29.0" text="Doctor ID :">
-                                            <font>
-                                                <Font name="Serif Regular" size="18.0"/>
-                                            </font>
-                                        </Label>
-                                        <Label layoutX="46.0" layoutY="68.0" text="Doctor Name  :">
-                                            <font>
-                                                <Font name="Serif Regular" size="18.0"/>
-                                            </font>
-                                        </Label>
-                                        <Label layoutX="46.0" layoutY="102.0" text="Doctor Age :">
-                                            <font>
-                                                <Font name="Serif Regular" size="18.0"/>
-                                            </font>
-                                        </Label>
-                                        <Label layoutX="46.0" layoutY="139.0" text="Doctor Gender :">
-                                            <font>
-                                                <Font name="Serif Regular" size="18.0"/>
-                                            </font>
-                                        </Label>
-                                        <Label layoutX="48.0" layoutY="177.0" text="Experience :">
-                                            <font>
-                                                <Font name="Serif Regular" size="18.0"/>
-                                            </font>
-                                        </Label>
-                                        <Label layoutX="48.0" layoutY="214.0" text="No of treatment :">
-                                            <font>
-                                                <Font name="Serif Regular" size="18.0"/>
-                                            </font>
-                                        </Label>
-                                        <Label layoutX="48.0" layoutY="250.0" text="Income :">
-                                            <font>
-                                                <Font name="Serif Regular" size="18.0"/>
-                                            </font>
-                                        </Label>
-                                        <Label layoutX="44.0" layoutY="286.0" text="Treatment Charges :">
-                                            <font>
-                                                <Font name="Serif Regular" size="18.0"/>
-                                            </font>
-                                        </Label>
-                                        <TextField fx:id="Doctor_id" layoutX="245.0" layoutY="25.0" prefHeight="28.0"
-                                                   prefWidth="218.0">
-                                            <font>
-                                                <Font name="Serif Regular" size="15.0"/>
-                                            </font>
-                                        </TextField>
-                                        <TextField fx:id="Doctor_Name" layoutX="246.0" layoutY="61.0" prefHeight="28.0"
-                                                   prefWidth="218.0">
-                                            <font>
-                                                <Font name="Serif Regular" size="15.0"/>
-                                            </font>
-                                        </TextField>
-                                        <TextField fx:id="Doctor_Age" layoutX="246.0" layoutY="98.0" prefHeight="28.0"
-                                                   prefWidth="218.0">
-                                            <font>
-                                                <Font name="Serif Regular" size="15.0"/>
-                                            </font>
-                                        </TextField>
-                                        <TextField fx:id="Doctor_Gender" layoutX="246.0" layoutY="137.0"
-                                                   prefHeight="28.0"
-                                                   prefWidth="218.0">
-                                            <font>
-                                                <Font name="Serif Regular" size="15.0"/>
-                                            </font>
-                                        </TextField>
-                                        <TextField fx:id="Doctor_Expirence" layoutX="246.0" layoutY="175.0"
-                                                   prefHeight="28.0" prefWidth="218.0">
-                                            <font>
-                                                <Font name="Serif Regular" size="15.0"/>
-                                            </font>
-                                        </TextField>
-                                        <TextField fx:id="Doctor_NoT" layoutX="246.0" layoutY="212.0" prefHeight="28.0"
-                                                   prefWidth="218.0">
-                                            <font>
-                                                <Font name="Serif Regular" size="15.0"/>
-                                            </font>
-                                        </TextField>
-                                        <TextField fx:id="Doctor_Income" layoutX="246.0" layoutY="249.0"
-                                                   prefHeight="28.0"
-                                                   prefWidth="218.0">
-                                            <font>
-                                                <Font name="Serif Regular" size="15.0"/>
-                                            </font>
-                                        </TextField>
-                                        <TextField fx:id="Doctor_TreatmentChrg" layoutX="247.0" layoutY="286.0"
-                                                   prefHeight="28.0" prefWidth="218.0">
-                                            <font>
-                                                <Font name="Serif Regular" size="15.0"/>
-                                            </font>
-                                        </TextField>
-                                        <Button fx:id="Doctor_Add_Btn" layoutX="561.0" layoutY="24.0"
-                                                mnemonicParsing="false" onAction="#addDoctorAdd" prefHeight="32.0"
-                                                prefWidth="184.0" styleClass="item-edit-button" text="Add">
-                                            <font>
-                                                <Font size="10.0"/>
-                                            </font>
-                                            <graphic>
-                                                <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true"
-                                                           preserveRatio="true" translateX="-27.0">
+                                        <AnchorPane layoutX="69.0" layoutY="48.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
                                                     <image>
-                                                        <Image url="@Image/icons8_add_100px_1.png"/>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
                                                     </image>
                                                 </ImageView>
-                                            </graphic>
-                                        </Button>
-                                        <Button fx:id="Doctor_update_Btn" layoutX="561.0" layoutY="82.0"
-                                                mnemonicParsing="false" prefHeight="32.0" prefWidth="184.0"
-                                                styleClass="item-edit-button" text="Update">
-                                            <font>
-                                                <Font size="10.0"/>
-                                            </font>
-                                            <graphic>
-                                                <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true"
-                                                           preserveRatio="true" translateX="-20.0">
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ1" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="69.0" layoutY="532.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
                                                     <image>
-                                                        <Image url="@Image/icons8_update_64px_1.png"/>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
                                                     </image>
                                                 </ImageView>
-                                            </graphic>
-                                        </Button>
-                                        <Button fx:id="Doctor_clear_Btn" layoutX="561.0" layoutY="142.0"
-                                                mnemonicParsing="false" prefHeight="32.0" prefWidth="184.0"
-                                                styleClass="item-edit-button" text="Clear">
-                                            <font>
-                                                <Font size="10.0"/>
-                                            </font>
-                                            <graphic>
-                                                <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true"
-                                                           preserveRatio="true" translateX="-25.0">
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ3" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="69.0" layoutY="299.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
                                                     <image>
-                                                        <Image url="@Image/icons8_clear_symbol_64px.png"/>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
                                                     </image>
                                                 </ImageView>
-                                            </graphic>
-                                        </Button>
-                                        <Button fx:id="Doctor_Delete_Btn" layoutX="561.0" layoutY="202.0"
-                                                mnemonicParsing="false" prefHeight="32.0" prefWidth="184.0"
-                                                styleClass="item-edit-button" text="Delete">
-                                            <font>
-                                                <Font size="10.0"/>
-                                            </font>
-                                            <graphic>
-                                                <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true"
-                                                           preserveRatio="true" translateX="-20.0">
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ2" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="342.0" layoutY="50.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
                                                     <image>
-                                                        <Image url="@Image/icons8_trash_100px.png"/>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
                                                     </image>
                                                 </ImageView>
-                                            </graphic>
-                                        </Button>
-                                        <Button fx:id="Doctor_ImageImport_Btn" layoutX="561.0" layoutY="257.0"
-                                                mnemonicParsing="false" prefHeight="32.0" prefWidth="184.0"
-                                                styleClass="item-edit-button" text="Import">
-                                            <font>
-                                                <Font size="10.0"/>
-                                            </font>
-                                            <graphic>
-                                                <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true"
-                                                           preserveRatio="true" translateX="-20.0">
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ4" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="342.0" layoutY="534.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
                                                     <image>
-                                                        <Image url="@Image/icons8_import_100px_3.png"/>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
                                                     </image>
                                                 </ImageView>
-                                            </graphic>
-                                        </Button>
-                                        <AnchorPane fx:id="ImagePane" layoutX="922.0" layoutY="31.0" prefHeight="270.0"
-                                                    prefWidth="307.0" styleClass="shadow"/>
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ6" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="342.0" layoutY="301.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ5" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="617.0" layoutY="50.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ7" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="617.0" layoutY="534.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ9" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="617.0" layoutY="301.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ8" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="885.0" layoutY="50.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ10" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="885.0" layoutY="534.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ12" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="885.0" layoutY="301.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ11" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="1157.0" layoutY="50.0" prefHeight="175.0" prefWidth="181.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ13" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="1157.0" layoutY="534.0" prefHeight="175.0"
+                                                    prefWidth="181.0" styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ15" layoutX="11.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="1157.0" layoutY="301.0" prefHeight="175.0"
+                                                    prefWidth="181.0" styleClass="shadow">
+                                            <children>
+                                                <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
+                                                        styleClass="slotBtn" text="Slot Book"/>
+                                                <Button fx:id="INQ14" layoutX="6.0" layoutY="133.0"
+                                                        mnemonicParsing="false" onAction="#go_to_inquery"
+                                                        styleClass="slotBtn" text="Inquery"/>
+                                            </children>
+                                        </AnchorPane>
                                     </children>
                                 </AnchorPane>
-                                <AnchorPane layoutX="45.0" layoutY="396.0" prefHeight="325.0" prefWidth="1319.0"
-                                            styleClass="shadow">
+                                <AnchorPane fx:id="YellowScreen" layoutX="332.0" layoutY="141.0" prefHeight="796.8"
+                                            prefWidth="1372.0" styleClass="yellow" visible="false"
+                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <TableView fx:id="addDoctor_tableVew" prefHeight="325.6" prefWidth="1319.2"
-                                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                            <columns>
-                                                <TableColumn fx:id="Doctor_col_id" prefWidth="75.0" text="Doctor ID"/>
-                                                <TableColumn fx:id="Doctor_col_Name" prefWidth="86.39998626708984"
-                                                             text="Doctor Name"/>
-                                                <TableColumn fx:id="Doctor_col_age" prefWidth="86.39998626708984"
-                                                             text=" Age"/>
-                                                <TableColumn fx:id="Doctor_col_Gender" prefWidth="86.39998626708984"
-                                                             text="Gender"/>
-                                                <TableColumn fx:id="Doctor_col_Exprience" prefWidth="86.39998626708984"
-                                                             text="Expirence"/>
-                                                <TableColumn fx:id="Doctor_col_NoT" prefWidth="86.39998626708984"
-                                                             text="No of Treatment"/>
-                                                <TableColumn fx:id="Doctor_col_Income" prefWidth="86.39998626708984"
-                                                             text="Income"/>
-                                                <TableColumn fx:id="Doctor_col_TreatmentCharges"
-                                                             prefWidth="86.39998626708984" text="Treatment Charges"/>
-                                            </columns>
-                                            <columnResizePolicy>
-                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
-                                            </columnResizePolicy>
-                                        </TableView>
+                                        <AnchorPane layoutX="28.0" layoutY="34.0" prefHeight="378.0" prefWidth="1334.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <AreaChart layoutX="14.0" layoutY="5.0" prefHeight="365.0"
+                                                           prefWidth="1310.0" title="Growth Chart">
+                                                    <xAxis>
+                                                        <CategoryAxis side="BOTTOM"/>
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis side="LEFT"/>
+                                                    </yAxis>
+                                                </AreaChart>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="28.0" layoutY="444.0" prefHeight="286.0" prefWidth="286.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <Label layoutX="71.0" layoutY="30.0" text="Pending Patient ">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="375.0" layoutY="444.0" prefHeight="286.0" prefWidth="286.0"
+                                                    styleClass="shadow"/>
+                                        <AnchorPane layoutX="726.0" layoutY="444.0" prefHeight="286.0" prefWidth="286.0"
+                                                    styleClass="shadow"/>
+                                        <AnchorPane layoutX="1075.0" layoutY="444.0" prefHeight="286.0"
+                                                    prefWidth="286.0" styleClass="shadow"/>
                                     </children>
                                 </AnchorPane>
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane fx:id="blueScreen" layoutX="440.0" layoutY="209.0" prefHeight="759.2"
-                                    prefWidth="1399.2"
-                                    styleClass="blue" stylesheets="@mainSceenStyle.Css" visible="false"
-                                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                                    AnchorPane.rightAnchor="0.0"
-                                    AnchorPane.topAnchor="0.0">
-                            <children>
-                                <AnchorPane layoutX="420.0" layoutY="409.0" prefHeight="322.0" prefWidth="480.0"
-                                            style="-fx-background-color: #fff;" styleClass="shadow">
+                                <AnchorPane fx:id="blueScreen" layoutX="440.0" layoutY="209.0" prefHeight="759.2"
+                                            prefWidth="1399.2" styleClass="blue" stylesheets="@mainSceenStyle.Css"
+                                            visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <Label layoutX="132.0" layoutY="14.0" text="Medical Test Inquery">
-                                            <font>
-                                                <Font name="Serif Regular" size="25.0"/>
-                                            </font>
-                                        </Label>
-                                        <TextField alignment="CENTER" layoutX="50.0" layoutY="55.0" prefHeight="38.0"
-                                                   prefWidth="388.0" promptText="First &amp; Last Name"/>
-                                        <TextField alignment="CENTER" layoutX="50.0" layoutY="111.0" prefHeight="38.0"
-                                                   prefWidth="388.0" promptText="Mobile No."/>
-                                        <TextField alignment="CENTER" layoutX="50.0" layoutY="161.0" prefHeight="38.0"
-                                                   prefWidth="388.0" promptText="Email Id"/>
-                                        <TextField alignment="CENTER" layoutX="46.0" layoutY="216.0" prefHeight="38.0"
-                                                   prefWidth="388.0" promptText="Inquery About"/>
-                                        <Button layoutX="190.0" layoutY="277.0" mnemonicParsing="false"
-                                                onAction="#sendRequest" text="Send Request "/>
+                                        <AnchorPane layoutX="420.0" layoutY="409.0" prefHeight="322.0" prefWidth="480.0"
+                                                    style="-fx-background-color: #fff;" styleClass="shadow">
+                                            <children>
+                                                <Label layoutX="132.0" layoutY="14.0" text="Medical Test Inquery">
+                                                    <font>
+                                                        <Font name="Serif Regular" size="25.0"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField alignment="CENTER" layoutX="50.0" layoutY="55.0"
+                                                           prefHeight="38.0" prefWidth="388.0"
+                                                           promptText="First &amp; Last Name"/>
+                                                <TextField alignment="CENTER" layoutX="50.0" layoutY="111.0"
+                                                           prefHeight="38.0" prefWidth="388.0" promptText="Mobile No."/>
+                                                <TextField alignment="CENTER" layoutX="50.0" layoutY="161.0"
+                                                           prefHeight="38.0" prefWidth="388.0" promptText="Email Id"/>
+                                                <TextField alignment="CENTER" layoutX="46.0" layoutY="216.0"
+                                                           prefHeight="38.0" prefWidth="388.0"
+                                                           promptText="Inquery About"/>
+                                                <Button layoutX="190.0" layoutY="277.0" mnemonicParsing="false"
+                                                        onAction="#sendRequest" text="Send Request "/>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="74.0" layoutY="14.0" prefHeight="350.0" prefWidth="1302.0"
+                                                    styleClass="shadow">
+                                            <children>
+                                                <TableView layoutX="106.0" layoutY="23.0" prefHeight="350.4"
+                                                           prefWidth="1302.4" AnchorPane.bottomAnchor="0.0"
+                                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                           AnchorPane.topAnchor="0.0">
+                                                    <columns>
+                                                        <TableColumn prefWidth="75.0" text="SNo"/>
+                                                        <TableColumn prefWidth="75.0" text="Test Name "/>
+                                                        <TableColumn prefWidth="75.0" text="Time period "/>
+                                                        <TableColumn prefWidth="75.0" text="EBT(Eat Before Test)"/>
+                                                        <TableColumn prefWidth="75.0" text="Charges"/>
+                                                        <TableColumn prefWidth="75.0" text="Report(After Test)"/>
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </children>
+                                        </AnchorPane>
                                     </children>
                                 </AnchorPane>
-                                <AnchorPane layoutX="74.0" layoutY="14.0" prefHeight="350.0" prefWidth="1302.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <TableView layoutX="106.0" layoutY="23.0" prefHeight="350.4" prefWidth="1302.4"
-                                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                            <columns>
-                                                <TableColumn prefWidth="75.0" text="SNo"/>
-                                                <TableColumn prefWidth="75.0" text="Test Name "/>
-                                                <TableColumn prefWidth="75.0" text="Time period "/>
-                                                <TableColumn prefWidth="75.0" text="EBT(Eat Before Test)"/>
-                                                <TableColumn prefWidth="75.0" text="Charges"/>
-                                                <TableColumn prefWidth="75.0" text="Report(After Test)"/>
-                                            </columns>
-                                            <columnResizePolicy>
-                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
-                                            </columnResizePolicy>
-                                        </TableView>
-                                    </children>
-                                </AnchorPane>
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane fx:id="slotAnchorPane" layoutX="298.0" layoutY="153.0" prefHeight="759.2"
-                                    prefWidth="1399.2" styleClass="darkBlue" visible="false"
-                                    AnchorPane.bottomAnchor="0.0"
-                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                            <children>
-                                <AnchorPane layoutX="69.0" layoutY="48.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ1" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="69.0" layoutY="532.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ3" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="69.0" layoutY="299.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ2" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="342.0" layoutY="50.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ4" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="342.0" layoutY="534.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ6" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="342.0" layoutY="301.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ5" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="617.0" layoutY="50.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ7" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="617.0" layoutY="534.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ9" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="617.0" layoutY="301.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ8" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="885.0" layoutY="50.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ10" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="885.0" layoutY="534.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ12" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="885.0" layoutY="301.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ11" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="1157.0" layoutY="50.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ13" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="1157.0" layoutY="534.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ15" layoutX="11.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="1157.0" layoutY="301.0" prefHeight="175.0" prefWidth="181.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <ImageView fitHeight="133.0" fitWidth="152.0" layoutX="24.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/70288001-91ce-4975-b813-f19955d870a6.png"/>
-                                            </image>
-                                        </ImageView>
-                                        <Button layoutX="92.0" layoutY="133.0" mnemonicParsing="false"
-                                                styleClass="slotBtn"
-                                                text="Slot Book"/>
-                                        <Button fx:id="INQ14" layoutX="6.0" layoutY="133.0" mnemonicParsing="false"
-                                                onAction="#go_to_inquery" styleClass="slotBtn" text="Inquery"/>
-                                    </children>
-                                </AnchorPane>
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane fx:id="YellowScreen" layoutX="332.0" layoutY="141.0" prefHeight="796.8"
-                                    prefWidth="1372.0" styleClass="yellow" visible="false" AnchorPane.bottomAnchor="0.0"
-                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                            <children>
-                                <AnchorPane layoutX="28.0" layoutY="34.0" prefHeight="378.0" prefWidth="1334.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <AreaChart layoutX="14.0" layoutY="5.0" prefHeight="365.0" prefWidth="1310.0"
-                                                   title="Growth Chart">
-                                            <xAxis>
-                                                <CategoryAxis side="BOTTOM"/>
-                                            </xAxis>
-                                            <yAxis>
-                                                <NumberAxis side="LEFT"/>
-                                            </yAxis>
-                                        </AreaChart>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="28.0" layoutY="444.0" prefHeight="286.0" prefWidth="286.0"
-                                            styleClass="shadow">
-                                    <children>
-                                        <Label layoutX="71.0" layoutY="30.0" text="Pending Patient ">
-                                            <font>
-                                                <Font name="Serif Regular" size="22.0"/>
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane layoutX="375.0" layoutY="444.0" prefHeight="286.0" prefWidth="286.0"
-                                            styleClass="shadow"/>
-                                <AnchorPane layoutX="726.0" layoutY="444.0" prefHeight="286.0" prefWidth="286.0"
-                                            styleClass="shadow"/>
-                                <AnchorPane layoutX="1075.0" layoutY="444.0" prefHeight="286.0" prefWidth="286.0"
-                                            styleClass="shadow"/>
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane prefHeight="783.0" prefWidth="1402.0" styleClass="red" AnchorPane.bottomAnchor="0.0"
-                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                            <children>
-                                <Button layoutX="26.0" layoutY="9.0" mnemonicParsing="false" prefHeight="70.0"
-                                        prefWidth="83.0" styleClass="button_transparent">
-                                    <graphic>
-                                        <ImageView fitHeight="55.0" fitWidth="96.0" pickOnBounds="true"
-                                                   preserveRatio="true">
-                                            <image>
-                                                <Image url="@Image/icons8_back_to_30px_2.png"/>
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                </Button>
-                                <ScrollPane layoutX="79.0" layoutY="255.0" prefHeight="508.0" prefWidth="1322.0"
-                                            styleClass="Scrollpane">
-                                    <content>
-                                        <Text lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                                              text="A blood test is a laboratory analysis performed on a blood sample that is usually extracted from a vein in the arm using a hypodermic needle, or via fingerprick. Multiple tests for specific blood components, such as a glucose test or a cholesterol test, are often grouped together into one test panel called a blood panel or blood work. Blood tests are often used in health care to determine physiological and biochemical states, such as disease, mineral content, pharmaceutical drug effectiveness, and organ function. Typical clinical blood panels include a basic metabolic panel or a complete blood count. Blood tests are also used in drug tests to detect drug abuse.                                                                                                                                                                                                                                                                     Blood sugar level chartFasting blood glucose level testNormal reading for nondiabetic person = 70–99 mg/dl (3.9–6 mmol/L)*The recommendation for someone who is diabetic = 80–130 mg/dl (4.5–7.2 mmol/L).* MyMed Memo: Values between 50 and 70 are often seen in healthy people.Two hours after a mealNormal reading for nondiabetic person = Below 140 mg/dl (7.8 mmol/L)The recommendation for someone who is diabetic = Below 180 mg/dl (10.0 mmol/L)Random blood sugar level testA blood sample is taken at a random time, regardless of when the last meal was consumed.A normal blood sugar reading = Below 200mg/dl (or 11.1 mmol/L)HbA1c TestA HbA1c test (aka Haemoglobin A1C test) doesn't require fasting and determines the average level of blood glucose over the past two to three months. Red blood cells have a lifespan of roughly three months, and a HbA1c blood test measures the amount of glucose that has bound to them during this period.Normal reading for nondiabetic person = Below 5.7%The recommendation for someone who is diabetic = 7% or less (personal goals, will, however be determined by a doctor taking age and other medical factors into account)                                                                                                                                                                                                                                                                     if severe hyperglycaemia is left untreated the condition can lead to organ and tissue damage as the excess glucose present in the body can make it difficult for the organs and cells to function correctly. The disorder can also impair the immune system response in the healing of wounds and cuts.                                                                                                                                                                                                                                                                     Hypoglycaemia is a condition wherein blood sugar levels are too low. This condition affects a number of diabetic people when their bodies do not have enough glucose to use as energy. Hypoglycaemia is commonly the result of taking too much of the medication/s prescribed to treat diabetes, eating less than expected, exercising more than normal or skipping meals.Some of the symptoms of hypoglycaemia include:A pale faceUnexplained fatigueHungerExcessive perspirationSkin tinglingHeadacheTrembling in hands and other body partsBlurry visionRapid heart rateThe key to treating low blood sugar is to eat something rich in carbohydrates such as a granola bar, fruit, fruit juice or cookies if you begin to show any of the above-mentioned symptoms. Those who have low blood sugar are often aware of this and will tend to carry something to eat on them in case of a hyperglycaemic episode."
-                                              wrappingWidth="1245.3360834121704">
-                                            <Font name="Serif Italic" size="19.0"/>
 
-                                        </Text>
-                                    </content>
-                                </ScrollPane>
-                                <ImageView fitHeight="170.0" fitWidth="236.0" layoutX="602.0" layoutY="25.0"
-                                           pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@Image/hand-with-protective-gloves-holding-blood-samples-covid-test.jpg"/>
-                                    </image>
-                                </ImageView>
-                                <Label layoutX="627.0" layoutY="199.0" text="Blood Test">
-                                    <font>
-                                        <Font name="Serif Bold" size="39.0"/>
-                                    </font>
-                                </Label>
+
                             </children>
+
                         </AnchorPane>
+                        <!-- <AnchorPane prefHeight="783.0" prefWidth="1402.0" styleClass="red" AnchorPane.bottomAnchor="0.0"
+                                       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                               <children>
+                                   <Button layoutX="26.0" layoutY="9.0" mnemonicParsing="false" prefHeight="70.0"
+                                           prefWidth="83.0" styleClass="button_transparent">
+                                       <graphic>
+                                           <ImageView fitHeight="55.0" fitWidth="96.0" pickOnBounds="true"
+                                                      preserveRatio="true">
+                                               <image>
+                                                   <Image url="@Image/icons8_back_to_30px_2.png"/>
+                                               </image>
+                                           </ImageView>
+                                       </graphic>
+                                   </Button>
+                                   <ScrollPane layoutX="79.0" layoutY="255.0" prefHeight="508.0" prefWidth="1322.0"
+                                               styleClass="Scrollpane">
+                                       <content>
+                                           <Text lineSpacing="7.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                 text="A blood test is a laboratory analysis performed on a blood sample that is usually extracted from a vein in the arm using a hypodermic needle, or via fingerprick. Multiple tests for specific blood components, such as a glucose test or a cholesterol test, are often grouped together into one test panel called a blood panel or blood work. Blood tests are often used in health care to determine physiological and biochemical states, such as disease, mineral content, pharmaceutical drug effectiveness, and organ function. Typical clinical blood panels include a basic metabolic panel or a complete blood count. Blood tests are also used in drug tests to detect drug abuse.                                                                                                                                                                                                                                                                     Blood sugar level chartFasting blood glucose level testNormal reading for nondiabetic person = 70–99 mg/dl (3.9–6 mmol/L)*The recommendation for someone who is diabetic = 80–130 mg/dl (4.5–7.2 mmol/L).* MyMed Memo: Values between 50 and 70 are often seen in healthy people.Two hours after a mealNormal reading for nondiabetic person = Below 140 mg/dl (7.8 mmol/L)The recommendation for someone who is diabetic = Below 180 mg/dl (10.0 mmol/L)Random blood sugar level testA blood sample is taken at a random time, regardless of when the last meal was consumed.A normal blood sugar reading = Below 200mg/dl (or 11.1 mmol/L)HbA1c TestA HbA1c test (aka Haemoglobin A1C test) doesn't require fasting and determines the average level of blood glucose over the past two to three months. Red blood cells have a lifespan of roughly three months, and a HbA1c blood test measures the amount of glucose that has bound to them during this period.Normal reading for nondiabetic person = Below 5.7%The recommendation for someone who is diabetic = 7% or less (personal goals, will, however be determined by a doctor taking age and other medical factors into account)                                                                                                                                                                                                                                                                     if severe hyperglycaemia is left untreated the condition can lead to organ and tissue damage as the excess glucose present in the body can make it difficult for the organs and cells to function correctly. The disorder can also impair the immune system response in the healing of wounds and cuts.                                                                                                                                                                                                                                                                     Hypoglycaemia is a condition wherein blood sugar levels are too low. This condition affects a number of diabetic people when their bodies do not have enough glucose to use as energy. Hypoglycaemia is commonly the result of taking too much of the medication/s prescribed to treat diabetes, eating less than expected, exercising more than normal or skipping meals.Some of the symptoms of hypoglycaemia include:A pale faceUnexplained fatigueHungerExcessive perspirationSkin tinglingHeadacheTrembling in hands and other body partsBlurry visionRapid heart rateThe key to treating low blood sugar is to eat something rich in carbohydrates such as a granola bar, fruit, fruit juice or cookies if you begin to show any of the above-mentioned symptoms. Those who have low blood sugar are often aware of this and will tend to carry something to eat on them in case of a hyperglycaemic episode."
+                                                 wrappingWidth="1245.3360834121704">
+                                               <Font name="Serif Italic" size="19.0"/>
+
+                                           </Text>
+                                       </content>
+                                   </ScrollPane>
+                                   <ImageView fitHeight="170.0" fitWidth="236.0" layoutX="602.0" layoutY="25.0"
+                                              pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                           <Image url="@Image/hand-with-protective-gloves-holding-blood-samples-covid-test.jpg"/>
+                                       </image>
+                                   </ImageView>
+                                   <Label layoutX="627.0" layoutY="199.0" text="Blood Test">
+                                       <font>
+                                           <Font name="Serif Bold" size="39.0"/>
+                                       </font>
+                                   </Label>
+                               </children>
+                           </AnchorPane>-->
                     </center>
                 </BorderPane>
             </children>
         </AnchorPane>
     </children>
 </StackPane>
-        <!--   </children>
-        </AnchorPane>
-     </children>
-  </StackPane>
-  -->
